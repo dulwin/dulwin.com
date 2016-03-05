@@ -21,7 +21,7 @@ a:active {
   text-decoration: none;
 }
 .text-title {
-  color: #4cb85a;
+  color: #27ae60;
 }
 .text {
   color: #363636;
@@ -66,11 +66,11 @@ body {
   }
 }
 .logo a {
-  color: #4cb85a;
+  color: #27ae60;
   text-decoration: none;
 }
 .logo a:hover {
-  color: #4cb85a;
+  color: #27ae60;
   text-decoration: none;
 }
 .navigation {
@@ -114,6 +114,11 @@ body {
   width: 100%;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  #landing {
+    margin-top: 250px;
+  }
+}
 footer {
   clear: both;
   width: 100%;
@@ -127,9 +132,6 @@ footer .container {
   text-align: center;
   padding: 2em;
   border-top: 1px solid #dddddd;
-}
-footer .container a {
-  color: #363636;
 }
 .bottom {
   position: absolute;
@@ -215,6 +217,14 @@ header {
 @media screen and (min-width: 768px) {
   .desktop-hidden {
     display: none;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    max-height: 250px;
   }
 }
 .left {

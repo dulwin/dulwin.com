@@ -3,7 +3,8 @@
 @base: #F6F6F6;
 @grey: #363636;
 @light-grey: #dddddd;
-@main: #4cb85a;
+@main: #27ae60;
+@secondary: #d32f6f;
 
 html {
     font-size: 12px;
@@ -94,6 +95,9 @@ body {
     max-height: 70%;
     width: 100%;
     position: relative;
+    @media screen and (min-width: 768px) {
+        margin-top: 250px;
+    }
 }
 
 footer {
@@ -108,9 +112,6 @@ footer {
         text-align: center;
         padding: 2em;
         border-top: 1px solid @light-grey;
-        a {
-            color: @grey;
-        }
     }
 
 }
@@ -205,6 +206,14 @@ header { background-color: @base; }
 
 @media screen and (min-width: 768px) {
     .desktop-hidden { display: none; }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        width: 100%;
+        max-height: 250px;
+    }
 }
 
 .left { float: left; }
