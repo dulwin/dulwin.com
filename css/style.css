@@ -114,6 +114,23 @@ body {
   width: 100%;
   position: relative;
 }
+footer {
+  clear: both;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  margin-top: 8em;
+}
+footer .container {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 2em;
+  border-top: 1px solid #dddddd;
+}
+footer .container a {
+  color: #363636;
+}
 .bottom {
   position: absolute;
   margin-left: 50%;
@@ -155,12 +172,6 @@ body {
     background: #363636;
     box-shadow: 0 0.5em 0 0 #363636, 0 1em 0 0 #363636;
   }
-  .mobile-fixed {
-    position: absolute;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-  }
   #mobile-nav {
     overflow: hidden;
     overflow-y: hidden;
@@ -190,6 +201,12 @@ body {
   #mobile-nav ul a:hover {
     text-decoration: none;
     background-color: transparent;
+  }
+  #copy {
+    font-size: 10px;
+    padding-top: 2em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
   }
 }
 header {
