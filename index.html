@@ -16,33 +16,47 @@
 </head>
 
 <body>
-    <header>
+    <div class="wrapper">
+    <div id="mobile-nav" class="desktop-hidden">
+        <ul class="nav nav-justified center">
+            <li><a href="#"><h4>About</h4></a></li>
+            <li><a href="#"><h4>Work</h4></a></li>
+            <li><a href="#"><h4>Projects</h4></a></li>
+            <li><a href="https://github.com/dulwinjayalath"><h4>Github</h4></a></li>
+            <li><a href="#"><h4>Contact</h4></a></li>
+        </ul>
+    </div>
+    <div id="mobile-wrapper">
+        <header class="mobile-fixed">
+            <div class="container">
+                <div class="center text-title logo">
+                    <a id="nav-toggle" class="left desktop-hidden box-shadow-menu"></a>
+                    <h1><a href="/">dulwin.</a></h1>
+                </div>
+                <div class="navigation text mobile-hidden">
+                    <ul class="nav nav-justified center">
+                        <li><a href="#"><h4>About</h4></a></li>
+                        <li><a href="#"><h4>Work</h4></a></li>
+                        <li><a href="#"><h4>Projects</h4></a></li>
+                        <li><a href="https://github.com/dulwinjayalath"><h4>Github</h4></a></li>
+                        <li><a href="#"><h4>Contact</h4></a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
         <div class="container">
-            <div class="center text-title logo">
-                <a href="/"><h1>dulwin.</h1><a>
-            </div>
-            <div class="navigation text">
-                <ul class="nav nav-justified center">
-                    <li><a href="#"><h4>About</h4></a></li>
-                    <li><a href="#"><h4>Work</h4></a></li>
-                    <li><a href="#"><h4>Projects</h4></a></li>
-                    <li><a href="https://github.com/dulwinjayalath"><h4>Github</h4></a></li>
-                    <li><a href="#"><h4>Contact</h4></a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+            <div id="landing" class="center">
+                Welcome.<br />
+                I'm Dulwin Jayalath.
 
-    <div class="container">
-        <div id="landing" class="center">
-            Welcome.<br />
-            I'm Dulwin Jayalath.
-
-            <div class="bottom">
-                <img src="img/down.png" width="24px">
+                <div class="bottom">
+                    <img src="img/down.png" width="24px">
+                </div>
             </div>
         </div>
     </div>
+</div>
 
     <script src="js/jquery-2.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
