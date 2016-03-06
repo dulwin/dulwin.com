@@ -202,7 +202,12 @@ footer {
     }
 }
 
-header { background-color: @base; }
+header {
+    background-color: @base;
+    @media screen and (max-width: 768px) {
+        border-bottom: 1px solid @light-grey;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .desktop-hidden { display: none; }
