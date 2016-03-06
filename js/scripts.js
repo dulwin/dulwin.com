@@ -33,20 +33,37 @@ $(window).scroll(function() {
     var scrollTop = $(window).scrollTop();
     var height = 570;
 
-    if (scrollTop <= 285) {
+    if (scrollTop <= 570) {
         $('#landing').css({
-            'opacity': ((height - 2*scrollTop) / (height)),
-            'height': (height-scrollTop)
+            'opacity': ((height - scrollTop) / (height))
         });
         if ( !nav_large ) {
-            $('.logo').stop(true, true).animate({ zoom: 1, margin: '5em 0' }, 100);
-            $('.navigation').stop(true, true).animate({ padding: '1.75em 4em' }, 100);
+            $('.logo').stop(false, true).animate({ zoom: 1, margin: '5em 0' }, 100);
+            $('.navigation').stop(false, true).animate({ padding: '1.75em 4em' }, 100);
             nav_large = true;
         }
     }
-    if (scrollTop > 350 && nav_large) {
-        $('.logo').stop(true, true).animate({ zoom: 0.5, margin: '2.5em 0' }, 100);
-        $('.navigation').stop(true, true).animate({ padding: '1em 4em' }, 100);
+    if (scrollTop > 650 && nav_large) {
+        $('.logo').stop(false, true).animate({ zoom: 0.5, margin: '2.5em 0' }, 100);
+        $('.navigation').stop(false, true).animate({ padding: '1em 4em' }, 100);
         nav_large = false;
     }
+});
+
+$('#contact').click(function(e) {
+    e.preventDefault();
+    $('#overlay').fadeIn(100);
+    $('#contact-card').fadeIn(100);
+});
+
+$('#close').click(function(e) {
+    e.preventDefault();
+    $('#overlay').fadeOut(100);
+    $('#contact-card').fadeOut(100);
+});
+
+$('#overlay').click(function(e) {
+    e.preventDefault();
+    $('#overlay').fadeOut(100);
+    $('#contact-card').fadeOut(100);
 });
