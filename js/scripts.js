@@ -95,4 +95,8 @@ if (window_width >= 768) {
         }, 100);
         self.parent().find('.timeline-desc').slideUp(100);
     });
+
+    $('.project-tile').hover(function(e) {
+        $(this).find('.project-desc').stop().animate({height: 'toggle'});
+    });
 }
