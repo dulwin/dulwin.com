@@ -19,12 +19,11 @@
     <div class="wrapper">
         <div id="mobile-nav" class="desktop-hidden">
             <ul class="nav nav-justified center">
-                <li><a href="index.html"><h4>Home</h4></a></li>
-                <li><a href="#"><h4>About</h4></a></li>
-                <li><a href="#"><h4>Work</h4></a></li>
-                <li><a href="#"><h4>Projects</h4></a></li>
-                <li><a href="https://github.com/dulwinjayalath"><h4>Github</h4></a></li>
-                <li><a href="contact.html"><h4>Contact</h4></a></li>
+                <li><a href="#landing"><h4>Home</h4></a></li>
+                <li><a href="#about"><h4>About</h4></a></li>
+                <li><a href="#work"><h4>Work</h4></a></li>
+                <li><a href="#projects"><h4>Projects</h4></a></li>
+                <li><a href="#contact"><h4>Contact</h4></a></li>
             </ul>
             <div class="center" id="copy">&copy; Dulwin Jayalath 2016</div>
         </div>
@@ -33,25 +32,24 @@
                 <div class="container">
                     <div class="center text-title logo">
                         <a id="nav-toggle" class="left desktop-hidden box-shadow-menu"></a>
-                        <h1><a href="/">dulwin.</a></h1>
+                        <h1><a href="#landing">dulwin.</a></h1>
                     </div>
                     <div class="navigation text mobile-hidden">
                         <ul class="nav nav-justified center">
-                            <li><a href="#"><h4>About</h4></a></li>
-                            <li><a href="#"><h4>Work</h4></a></li>
-                            <li><a href="#"><h4>Projects</h4></a></li>
-                            <li><a href="https://github.com/dulwinjayalath"><h4>Github</h4></a></li>
-                            <li><a href="#" id="contact"><h4>Contact</h4></a></li>
+                            <li><a href="#about"><h4>About</h4></a></li>
+                            <li><a href="#work"><h4>Work</h4></a></li>
+                            <li><a href="#projects"><h4>Projects</h4></a></li>
+                            <li><a href="#contact"><h4>Contact</h4></a></li>
                         </ul>
                     </div>
                 </div>
             </header>
 
-            <div class="container">
+            <div class="container banner-wrapper">
                 <div id="landing" class="center">
-                    <div class="fadeOutBlock">
-                        Hello.<br />
-                        I'm Dulwin Jayalath.
+                    <div>
+                        Hello. <br />
+                        I'm Dulwin Jayalath. <br />
                     </div>
                     <div class="bottom">
                         <img src="img/down.png" width="24px">
@@ -59,8 +57,104 @@
                 </div>
             </div>
 
-            <div class="container" style="height: 5000px">
-                Filler text
+            <div class="container" id="about">
+                <div class="section-title">
+                    About.
+                </div>
+                <div class="col-xs-12 content center" style='font-size:1.3em;'>
+                    I'm a versatile engineer with a proven ability to fit into any team, manage multiple projects, and meet tight deadlines.
+                    I'm passionate about learning new things and my current interests lie in Machine Learning and Artificial Intelligence.
+                </div>
+            </div>
+
+            <div class="container" id="work">
+                <div class="section-title">
+                    Work.
+                </div>
+                <section id="timeline">
+                    <div class="timeline-block">
+                        <div class="timeline-content">
+                            <div class="timeline-title text-right">
+                                <div>
+                                    Jan '16 - April '16<br />
+                                    <strong>Data Science Co-op</strong> @ Pythian
+                                </div>
+                                <img src="img/right-arrow.png">
+                            </div>
+                            <div class="timeline-content timeline-desc">
+                                While working at Pythian, I was responsible for prototyping and validating various models to perform tasks like topic modelling, sentiment analysis, text summarization, and chat interfaces.
+                                <br />
+                                <br />
+                                I also had to integrate the models produced in a chat and web interface for insights, visualizations, data collection, and data retrieval.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-block">
+                        <div class="timeline-content right">
+                            <div class="timeline-title">
+                                <img src="img/left-arrow.png" />
+                                <div>
+                                    May '15 - Sept '15<br />
+                                    <strong>Lamp Developer</strong> @ Horizn
+                                </div>
+                            </div>
+                            <div class="timeline-content timeline-desc">
+                                At Horizn, I was responsible for leading the front-end team for the redesign of the product, updating the database structure and data, assisting with the architecture of the website, and scripting tools to automate aspects of the deployment process.
+                                <br />
+                                <br />
+                                When I first started, I stepped into a project with an incredibly tight deadline and was one key to it's successful launch.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-block">
+                        <div class="timeline-content">
+                            <div class="timeline-title text-right">
+                                <div>
+                                    Dec '14 - Sept '15<br />
+                                    <strong>Web Developer</strong> @ Rock The Hills
+                                </div>
+                                <img src="img/right-arrow.png">
+                            </div>
+                            <div class="timeline-content timeline-desc">
+                                I was the lead developer in a two member team that designed and developed the festival's 2015 website.
+                                <br />
+                                <br />
+                                I also built a Content Management System that would allow site administrators to easily edit website content without needing any development experience.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-block">
+                        <div class="timeline-content right">
+                            <div class="timeline-title">
+                                <img src="img/left-arrow.png" />
+                                <div>
+                                    Jan '14 - Dec '14<br />
+                                    <strong>Web Dev. & Marketing</strong> @ Rock The Hills
+                                </div>
+                            </div>
+                            <div class="timeline-content timeline-desc">
+                                I was responsible for all web development, implementation of web software, and all graphic design for the inaugaral year of the festival.
+                                <br />
+                                <br />
+                                I was also in charge of managing and monitoring all marketing tools used to promote the event, which allowed us to bring in approx. 700 people in the first year of the festival.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-block">
+                        <div class="timeline-content">
+                            <div class="timeline-title text-right">
+                                <div>
+                                    July '13 - Aug '13<br />
+                                    <strong>Software Engineering Intern</strong> @ Athos
+                                </div>
+                                <img src="img/right-arrow.png">
+                            </div>
+                            <div class="timeline-content timeline-desc">
+                                I was responsible for implementing tools and pages into both the internal and external website.
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
 
             <footer class="mobile-hidden">
@@ -70,21 +164,6 @@
             </footer>
         </div>
     </div>
-
-    <div id="overlay" style="display: none;">
-        &nbsp;
-    </div>
-    <div id="contact-card" style="display: none;">
-        <div class="center"><strong>Shoot me a message.</strong></div>
-        <div id="contact-info">
-            <span>Email:</span> dejayala@uwaterloo.ca <br />
-            <span>LinkedIn:</span> <a href="https://www.linkedin.com/in/dulwinj">https://www.linkedin.com/in/dulwinj</a> <br />
-            <span>Twitter:</span> @dulwin
-        </div>
-        <div id="contact-close" class="center"><a href="#" id="close">Close</a></div>
-    </div>
-
-
     <script src="js/jquery-2.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.min.js"></script>
