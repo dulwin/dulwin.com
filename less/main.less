@@ -14,9 +14,9 @@ html {
 }
 
 h1 { font-size: 4em; font-weight: 700; }
-h4 { font-size: 14px; }
+h4 { font-size: 14px; background-color: none; }
 
-a, a:hover, a:visited, a:active { margin: 0 !important; padding: 0 !important; text-decoration: none; }
+a, a:hover, a:visited, a:active { margin: 0 !important; padding: 0 !important; text-decoration: none; background-color: transparent; }
 
 .text-title { color: @main; }
 .text { color: @grey; }
@@ -83,8 +83,11 @@ body {
     }
 }
 
+
+
 #landing {
     background-image: url("../img/landing.png");
+    background-repeat: no-repeat;
     background-size: 1120px 570px;
     font-weight: 300;
     color: @base;
@@ -92,12 +95,12 @@ body {
     text-transform: uppercase;
     padding-top: 2.5em;
     height: 570px;
-    max-height: 70%;
+    @media screen and (max-width: 767px) {
+        background-size: cover;
+        height: 100vh;
+    }
     width: 100%;
     position: relative;
-    @media screen and (min-width: 768px) {
-        margin-top: 250px;
-    }
 }
 
 footer {
@@ -118,12 +121,21 @@ footer {
 
 .bottom {
     position:absolute;
-    margin-left: 50%;
+    width: 100%;
+    text-align: center;
     bottom: 0;
 }
 
 
 @media screen and (max-width: 768px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        width: 100%;
+    }
+
     .wrapper {
         position: absolute;
         top:0;
@@ -219,9 +231,15 @@ header {
         width: 100%;
         max-height: 250px;
     }
+
+    .banner-wrapper {
+        margin-top: 250px;
+        overflow: hidden;
+    }
 }
 
 .left { float: left; }
+.right { float: right; }
 
 #overlay {
     width: 100%;
@@ -248,6 +266,9 @@ header {
         z-index: 10001;
         padding: 3em;
     }
+    @media screen and (max-width: 767px) {
+        margin-top: 59px;
+    }
     strong {
         color: @main;
         text-transform: uppercase;
@@ -271,11 +292,151 @@ header {
 }
 
 #contact-close {
-    color: @secondary;
+    color: @grey;
     text-transform: uppercase;
     letter-spacing: 2px;
     a, a:hover, a:visited, a:active {
-        color: @secondary;
+        color: @grey;
         text-decoration: none;
     }
+}
+
+@media screen and (min-width: 768px) {
+    #about {
+        margin-top: 15%;
+    }
+}
+
+#about, #work {
+    margin-bottom: 5em;
+}
+
+.section-title {
+    width: 100%;
+    padding: 1.5em;
+    font-weight: 600;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-top: 1px solid @light-grey;
+    border-bottom: 1px solid @light-grey;
+}
+
+.content {
+    padding: 1em;
+    line-height: 2em;
+}
+
+#timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+#timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 3px;
+  background: @grey;
+}
+@media only screen and (min-width: 768px) {
+  #timeline {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  #timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+
+  .timeline-content {
+      width: 50%;
+  }
+
+}
+
+.timeline-block {
+    @media only screen and (min-width: 768px) {
+        width: 80%;
+        margin: 1em auto;
+    }
+    @media only screen and (max-width: 767px) {
+        margin: 1em 0;
+    }
+
+    display: table;
+}
+
+.timeline-title {
+    clear: both;
+    font-size: 1.1em;
+    padding: 1em 0.5em 0 0.5em;
+    text-transform: uppercase;
+
+    img {
+        height: 1em;
+        width: 1em;
+        margin: 1em;
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    div {
+        display: inline-block;
+    }
+
+    border-bottom: 0px solid @light-grey;
+
+    @media only screen and (max-width: 767px) {
+        text-align: left !important;
+
+        img {
+            display: none;
+        }
+
+        div { margin-left: 4em; }
+    }
+}
+
+
+.timeline-title::after {
+    content: '';
+    position: absolute;
+    @media screen and (min-width: 768px) {
+        left: 49.4%;
+        transform: translateY(13px);
+    }
+    @media screen and (max-width: 767px) {
+        left: 13px;
+        transform: translateY(10px);
+    }
+    width: .9em;
+    height: .9em;
+    background-color: @main;
+    border-radius: 0.45em;
+}
+
+.timeline-desc {
+    background-color: @main;
+    color: @base;
+    padding: 1em;
+
+    @media screen and (min-width: 768px) {
+        width: 84%;
+        margin: 0 8%;
+    }
+
+    @media screen and (max-width: 767px) {
+        width: 80%;
+        margin-left: 13%;
+    }
+}
+
+.text-right {
+    text-align: right;
 }
