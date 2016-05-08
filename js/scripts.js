@@ -3,6 +3,10 @@ $(window).resize(function() {
     window_width = $(this).width();
 });
 
+$(window).on('orientationchange', function(e) {
+     window.location.reload();
+});
+
 var nav_toggled = false;
 function toggle_nav(open) {
     if (open) {
@@ -43,14 +47,14 @@ $('#mobile-nav .nav li a').click(function() {
 var nav_large = true;
 $(window).scroll(function() {
     var scrollTop = $(window).scrollTop();
-    if (scrollTop <= 400 && window_width >= 768) {
+    if (scrollTop <= 400 && window_width >= 992) {
         if ( !nav_large ) {
             $('.logo').stop(false, true).animate({ zoom: 1, margin: '5em 0' }, 100);
             $('.navigation').stop(false, true).animate({ padding: '1.75em 4em' }, 100);
             nav_large = true;
         }
     }
-    if (scrollTop > 375 && nav_large && window_width >= 768) {
+    if (scrollTop > 375 && nav_large && window_width >= 992) {
         $('.logo').stop(false, true).animate({ zoom: 0.5, margin: '2.5em 0' }, 100);
         $('.navigation').stop(false, true).animate({ padding: '1em 4em' }, 100);
         nav_large = false;
@@ -60,7 +64,7 @@ $(window).scroll(function() {
 $('a[href^="#"]').on('click', function(event) {
     var target = $(this.href.match('#.*')[0]);
     if( target.length ) {
-        if (window_width < 768) {
+        if (window_width < 992) {
             var top = $('#mobile-wrapper').scrollTop();
             event.preventDefault();
             $('#mobile-wrapper').animate({
@@ -76,7 +80,7 @@ $('a[href^="#"]').on('click', function(event) {
 });
 
 
-if (window_width >= 768) {
+if (window_width >= 992) {
     $('.timeline-desc').hide();
 
     $('.timeline-title').mouseenter(function() {

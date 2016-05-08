@@ -23,7 +23,7 @@ a:active {
   background-color: transparent;
 }
 .text-title {
-  color: #27ae60;
+  color: #27AE60;
 }
 .text {
   color: #363636;
@@ -52,12 +52,12 @@ body {
 .logo {
   font-size: 1em;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .logo {
     margin: 5em 0;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .logo {
     padding: 1.5em;
     margin: 0;
@@ -68,11 +68,11 @@ body {
   }
 }
 .logo a {
-  color: #27ae60;
+  color: #27AE60;
   text-decoration: none;
 }
 .logo a:hover {
-  color: #27ae60;
+  color: #27AE60;
   text-decoration: none;
 }
 .navigation {
@@ -80,8 +80,8 @@ body {
   font-weight: 400;
   text-align: center;
   padding: 1.75em 4em;
-  border-top: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
 }
 .navigation ul {
   width: 100%;
@@ -134,7 +134,7 @@ footer .container {
   letter-spacing: 2px;
   text-align: center;
   padding: 2em;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #DDDDDD;
 }
 .bottom {
   position: absolute;
@@ -142,7 +142,13 @@ footer .container {
   text-align: center;
   bottom: 0;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    margin: 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
   #nav-toggle {
     width: 30px;
     height: 23px;
@@ -202,17 +208,19 @@ footer .container {
     left: -250px;
     z-index: 1001;
     background-color: #F6F6F6;
-    border-right: 1px solid #dddddd;
+    border-right: 1px solid #DDDDDD;
   }
   #mobile-nav ul li {
+    display: block;
+    width: 100%;
     text-align: center;
     padding: 1.25em 1em;
-    border-top: 1px solid #dddddd;
+    border-top: 1px solid #DDDDDD;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
   #mobile-nav ul li:last-child {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #DDDDDD;
   }
   #mobile-nav ul a {
     color: #363636;
@@ -232,12 +240,12 @@ footer .container {
 header {
   background-color: #F6F6F6;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   header {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #DDDDDD;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .desktop-hidden {
     display: none;
   }
@@ -260,7 +268,7 @@ header {
 .right {
   float: right;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   #about {
     margin-top: 15%;
   }
@@ -277,8 +285,8 @@ header {
   text-align: center;
   font-weight: 600;
   letter-spacing: 2px;
-  border-top: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
 }
 .content {
   padding: 1em;
@@ -299,7 +307,7 @@ header {
   width: 3px;
   background: #363636;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   #timeline {
     margin-top: 3em;
     margin-bottom: 3em;
@@ -315,14 +323,15 @@ header {
 .timeline-block {
   display: table;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .timeline-block {
     width: 80%;
     margin: 1em auto;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   .timeline-block {
+    width: 100%;
     margin: 1em 0;
   }
 }
@@ -331,7 +340,7 @@ header {
   font-size: 1.1em;
   padding: 1em 0.5em 0 0.5em;
   text-transform: uppercase;
-  border-bottom: 0px solid #dddddd;
+  border-bottom: 0px solid #DDDDDD;
 }
 .timeline-title img {
   height: 1em;
@@ -343,7 +352,7 @@ header {
 .timeline-title div {
   display: inline-block;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   .timeline-title {
     text-align: left !important;
   }
@@ -359,48 +368,48 @@ header {
   position: absolute;
   width: .9em;
   height: .9em;
-  background-color: #27ae60;
+  background-color: #27AE60;
   border-radius: 0.45em;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .timeline-title::after {
     left: 49.4%;
     transform: translateY(13px);
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .timeline-title::after {
     left: 13px;
     transform: translateY(10px);
   }
 }
 .timeline-desc {
-  background-color: #27ae60;
+  background-color: #27AE60;
   color: #F6F6F6;
   padding: 1em;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .timeline-desc {
     width: 84%;
     margin: 0 8%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .timeline-desc {
     width: 80%;
-    margin-left: 13%;
+    margin-left: 4.5em;
   }
 }
 .text-right {
   text-align: right;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .contact-link svg {
     width: 50%;
     height: 50%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .contact-link svg {
     width: 70%;
     height: 70%;
@@ -408,7 +417,7 @@ header {
 }
 .contact-link path,
 .contact-link line {
-  fill: #dddddd;
+  fill: #DDDDDD;
 }
 .contact-link:hover path,
 .contact-link:hover line {
@@ -429,7 +438,7 @@ header {
   position: relative;
   margin: 1em 1em;
   height: 400px;
-  background-color: #dddddd;
+  background-color: #DDDDDD;
 }
 .project-tile .project-title {
   position: absolute;
@@ -438,29 +447,34 @@ header {
   font-weight: bold;
   font-size: 3em;
   line-height: 1em;
-  color: #aaa;
+  color: #AAAAAA;
   clear: both;
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .project-tile .project-title {
     bottom: 200px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .project-tile .project-title {
     bottom: 250px;
   }
 }
+.project-tile .project-title img {
+  width: 100%;
+  max-width: 400px;
+}
 .project-tile .project-desc {
   text-align: center;
   position: absolute;
+  width: 100%;
   bottom: 0;
   color: #F6F6F6;
   font-size: 1.2em;
-  background-color: #27ae60;
+  background-color: #27AE60;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .project-tile .project-desc {
     display: none;
   }

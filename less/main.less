@@ -1,10 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
 @base: #F6F6F6;
-@grey: #363636;
-@light-grey: #dddddd;
-@main: #27ae60;
-@secondary: #d32f6f;
+@dark-grey: #363636;
+@grey: #AAAAAA;
+@light-grey: #DDDDDD;
+@main: #27AE60;
+@secondary: #D32F6F;
+
+@xs-max: 767px;
+@sm-min: 768px;
+@sm-max: 991px;
+@md-min: 992px;
 
 html {
     font-size: 12px;
@@ -19,7 +25,7 @@ h4 { font-size: 14px; background-color: none; }
 a, a:hover, a:visited, a:active { margin: 0 !important; padding: 0 !important; text-decoration: none; background-color: transparent; }
 
 .text-title { color: @main; }
-.text { color: @grey; }
+.text { color: @dark-grey; }
 .text-light { color: @base; }
 
 .center { text-align: center }
@@ -32,7 +38,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     background-color: @base;
-    color: @grey;
+    color: @dark-grey;
     width: 100%;
     min-height: 100%;
 }
@@ -40,10 +46,10 @@ body {
 .logo {
     font-size: 1em;
     @media screen {
-        @media (min-width: 768px) {
+        @media (min-width: @md-min) {
             margin: 5em 0;
         }
-        @media (max-width: 767px) {
+        @media (max-width: @sm-max) {
             h1 { font-size: 1.75em; margin: 0; }
             padding: 1.5em;
             margin: 0;
@@ -68,7 +74,7 @@ body {
             letter-spacing: 2px;
             a {
                 background-color: transparent;
-                color: @grey;
+                color: @dark-grey;
                 -o-transition:.5s;
                 -ms-transition:.5s;
                 -moz-transition:.5s;
@@ -95,7 +101,7 @@ body {
     text-transform: uppercase;
     padding-top: 2.5em;
     height: 570px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: @xs-max) {
         background-size: cover;
         height: 100vh;
     }
@@ -126,8 +132,16 @@ footer {
     bottom: 0;
 }
 
+@media screen and (min-width: @sm-min) and (max-width: @sm-max) {
+    .container {
+        margin: 0;
+        width: 100%;
+    }
 
-@media screen and (max-width: 767px) {
+}
+
+
+@media screen and (max-width: @sm-max) {
     #nav-toggle {
         width: 30px;
         height: 23px;
@@ -178,10 +192,10 @@ footer {
         top: 0.3em;
         width: 2.5em;
         height: 0.3em;
-        background: @grey;
+        background: @dark-grey;
         box-shadow:
-        0 0.5em 0 0 @grey,
-        0 1em 0 0 @grey;
+        0 0.5em 0 0 @dark-grey,
+        0 1em 0 0 @dark-grey;
     }
 
     #mobile-nav {
@@ -198,6 +212,8 @@ footer {
 
         ul {
             li {
+                display: block;
+                width: 100%;
                 text-align: center;
                 padding: 1.25em 1em;
                 border-top: 1px solid @light-grey;
@@ -208,7 +224,7 @@ footer {
                 border-bottom: 1px solid @light-grey;
             }
             a {
-                color: @grey;
+                color: @dark-grey;
             }
             a:active, a:hover { text-decoration: none; background-color: transparent; }
         }
@@ -224,12 +240,12 @@ footer {
 
 header {
     background-color: @base;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: @sm-max) {
         border-bottom: 1px solid @light-grey;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: @md-min) {
     .desktop-hidden { display: none; }
     header {
         position: fixed;
@@ -249,7 +265,7 @@ header {
 .left { float: left; }
 .right { float: right; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: @md-min) {
     #about {
         margin-top: 15%;
     }
@@ -290,9 +306,9 @@ header {
   left: 18px;
   height: 100%;
   width: 3px;
-  background: @grey;
+  background: @dark-grey;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: @md-min) {
   #timeline {
     margin-top: 3em;
     margin-bottom: 3em;
@@ -309,11 +325,12 @@ header {
 }
 
 .timeline-block {
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: @md-min) {
         width: 80%;
         margin: 1em auto;
     }
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: @sm-max) {
+        width: 100%;
         margin: 1em 0;
     }
 
@@ -340,7 +357,7 @@ header {
 
     border-bottom: 0px solid @light-grey;
 
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: @sm-max) {
         text-align: left !important;
 
         img {
@@ -355,11 +372,11 @@ header {
 .timeline-title::after {
     content: '';
     position: absolute;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: @md-min) {
         left: 49.4%;
         transform: translateY(13px);
     }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: @sm-min) {
         left: 13px;
         transform: translateY(10px);
     }
@@ -374,14 +391,14 @@ header {
     color: @base;
     padding: 1em;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: @md-min) {
         width: 84%;
         margin: 0 8%;
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: @sm-max) {
         width: 80%;
-        margin-left: 13%;
+        margin-left: 4.5em;
     }
 }
 
@@ -391,12 +408,12 @@ header {
 
 .contact-link {
     svg {
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: @md-min) {
             width: 50%;
             height: 50%;
         }
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: @sm-max) {
             width: 70%;
             height: 70%;
         }
@@ -409,7 +426,7 @@ header {
 
 .contact-link:hover {
     path, line {
-        fill: @grey;
+        fill: @dark-grey;
     }
 }
 
@@ -440,22 +457,28 @@ header {
         font-weight: bold;
         font-size: 3em;
         line-height: 1em;
-        color: #aaa;
+        color: @grey;
         clear:both;
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: @md-min) {
             bottom: 200px;
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: @sm-max) {
             bottom: 250px;
         }
 
         width: 100%;
+
+        img {
+            width: 100%;
+            max-width: 400px;
+        }
     }
 
     .project-desc {
         text-align: center;
         position: absolute;
-        @media screen and (min-width: 768px) {
+        width: 100%;
+        @media screen and (min-width: @md-min) {
             display: none;
         }
         bottom: 0;
