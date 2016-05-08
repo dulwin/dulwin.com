@@ -69,8 +69,8 @@ $('a[href^="#"]').on('click', function(event) {
         } else {
             var nav_height = 132;
             $('html,body').animate({
-                scrollTop: target.offset().top - nav_height },
-                'fast');
+                scrollTop: target.offset().top - nav_height
+            }, 500);
         }
     }
 });
@@ -100,3 +100,7 @@ if (window_width >= 768) {
         $(this).find('.project-desc').stop().animate({height: 'toggle'});
     });
 }
+
+$('#projects a, #contact a').click(function(e) {
+    window.location.href = this.href;
+})
