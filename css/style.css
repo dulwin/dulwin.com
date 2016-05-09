@@ -405,14 +405,14 @@ header {
 }
 @media screen and (min-width: 992px) {
   .contact-link svg {
-    width: 50%;
-    height: 50%;
+    width: 40%;
+    height: 40%;
   }
 }
 @media screen and (max-width: 991px) {
   .contact-link svg {
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
   }
 }
 .contact-link path,
