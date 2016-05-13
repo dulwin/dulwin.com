@@ -377,7 +377,7 @@ header {
     transform: translateY(13px);
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .timeline-title::after {
     left: 13px;
     transform: translateY(10px);
